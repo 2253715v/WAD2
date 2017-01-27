@@ -59,7 +59,7 @@ def populate():
    for c in Category.objects.all():
        for p in Page.objects.filter(category=c):
            print("- {0} - {1}".format(str(c), str(p)))
-		   
+
 def add_page(cat, title, url, views=0):
     p = Page.objects.get_or_create(category=cat, title=title)[0]
     p.url=url
@@ -71,6 +71,7 @@ def add_cat(name):
     c = Category.objects.get_or_create(name=name)[0]
     c.save()
     return c
+
 def add_cat(name,views,likes):
     c = Category.objects.get_or_create(name=name)[0]
     c.views=views
