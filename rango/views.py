@@ -58,5 +58,5 @@ def home(request):
     return render(request, 'rango/home.html',context=context_dict)
 
 def about(request):
-    context_dict = {'iMess': "Rango says here is the about page"}
+    context_dict = {'iMess': "Rango says here is the about page",'author':'Nicky Vo'}
     return render(request, 'rango/about.html', context=context_dict)

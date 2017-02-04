@@ -7,15 +7,16 @@
 	<body>
 		<h1>This is a new about page</h1>
 		<div>
-            <i>{{ iMess }}</i><br />
-			<i>This tutorial has been put together by Nicky Vo</i>
+            <i>{{ iMess }}</i><br />			
         </div>
 		<div>
+			<h2>This tutorial has been put together by {{author}}</h2>
+		</div>
+		<div>
             <a href="/rango/">Index</a><br />
-			<img src="{% static "images/pic01.jpg" %}"
+			<img src="{% static "images/rango.jpg" %}"
                  alt="Picture of GU" />
-			<img src="{{MEDIA_URL}}cat.jpg"
-                 alt="Picture of cat" />	 
+			<img src="{{MEDIA_URL}}cat.jpg" alt="Picture of cat" />	 
         </div>
 	</body>
 		 
