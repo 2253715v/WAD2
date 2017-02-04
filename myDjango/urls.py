@@ -24,7 +24,6 @@ urlpatterns = [
     url(r'^$', views.index, name='index'),
     url(r'^about/', views.about, name='about'),
     url(r'^home/', views.home, name='home'),
-    url(r'^category/(?P<category_name_slug>[\w\-]+)/$',views.show_category, name='show_category'),
     url(r'^rango/', include('rango.urls')),
     # above maps any URLs starting 
     # with rango/ to be handled by
