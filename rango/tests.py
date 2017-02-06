@@ -59,7 +59,7 @@ class AboutPageTests(TestCase):
         # Exercise from Chapter 4 
         response = self.client.get(reverse('about'))
 
-        self.assertTemplateUsed(response, 'rango/about.html')
+        self.assertTemplateUsed(response, 'rango/about.html',)
         
         
         

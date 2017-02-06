@@ -9,6 +9,7 @@ class Category(models.Model):
     likes = models.IntegerField(default=0)
     name = models.CharField(max_length=128, unique=True)
     slug = models.SlugField(unique=True)
+    max_length = 128
 
     def __str__(self):  # For Python 2, use __unicode__ too
         return self.name
