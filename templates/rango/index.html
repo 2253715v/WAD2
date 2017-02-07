@@ -25,9 +25,9 @@
         </div>
      <div>
 	 <h1>Most Viewed Pages</h1>
-        {% if popular %}
+        {% if pages %}
         <ul>
-            {% for page in popular %}
+            {% for page in pages %}
             <!-- Following line changed to add an HTML hyperlink -->
             <li>
             <a href="{{ page.url }}">{{ page.title }}</a>
