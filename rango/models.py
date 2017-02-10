@@ -1,6 +1,7 @@
 from __future__ import unicode_literals
 from django.template.defaultfilters import slugify
 from django.db import models
+import datetime
 
 
 
@@ -27,7 +28,11 @@ class Page(models.Model):
     title = models.CharField(max_length=128)
     url = models.URLField()
     views = models.IntegerField(default=0)
+    last_visit = models.TimeField()
+    first_visit = models.TimeField()
 
+    def _set_first_visit(self): self.first_visit = datetime.datetime.now()
+    def _set_last_visit(self): self.last_visit = datetime.datetime.now()
     def _get_cat(self):return self.category
 
     def _get_link(self):return self.url
