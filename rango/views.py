@@ -97,8 +97,6 @@ def add_page(request, category_name_slug):
                 page = form.save(commit=False)
                 page.category = category
                 page.views = 0
-                page.last_visit = null
-                page.first_visit = null
                 page.save()
                 return show_category(request, category_name_slug)
         else:
